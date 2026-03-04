@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Для тебя ❤️</title>
+    <style>
+        body{
+            background:black;
+            color:white;
+            text-align:center;
+            font-family:Arial;
+        }
+        img{
+            width:250px;
+            border-radius:15px;
+            margin:10px;
+            box-shadow:0 0 20px red;
+        }
+        button{
+            padding:15px 30px;
+            font-size:18px;
+            border:none;
+            border-radius:10px;
+            background:red;
+            color:white;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Анари ❤️</h1>
+<p>Эта песня только для тебя...</p>
+
+<img src="{{ url_for('static', filename='Screenshot from 2026-02-06 17-37-23.png') }}">
+<img src="{{ url_for('static', filename='photo2.jpg') }}">
+
+<br><br>
+
+<audio id="music">
+    <source src="{{ url_for('static', filename='Strange - Малая.mp3') }}" type="audio/mp3">
+</audio>
+
+<button onclick="document.getElementById('music').play()">
+Нажми сюда 🎵
+</button>
+
+</body>
+</html>
